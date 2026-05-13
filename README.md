@@ -18,7 +18,13 @@ The original Hermes project is unmaintained. This fork updates it to build and r
 - **Modern toolbar layout** — all toolbar items visible using expanded toolbar style
 - **Enhanced like indicator** — thumbs-up icon tints blue when a song is liked
 
-### Building
+### Download
+
+Grab the latest DMG from the [Releases](https://github.com/gitgonow/Hermes-ARM64/releases) page.
+
+**Note:** This build is ad-hoc signed. On first launch, macOS may block it. Go to **System Settings > Privacy & Security** and click **Open Anyway**.
+
+### Building from source
 
 Requires Xcode with arm64 support.
 
