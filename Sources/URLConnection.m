@@ -1,6 +1,9 @@
 #import "PreferencesController.h"
 #import "URLConnection.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 NSString * const URLConnectionProxyValidityChangedNotification = @"URLConnectionProxyValidityChangedNotification";
 
 @implementation URLConnection
@@ -222,3 +225,5 @@ static void URLConnectionStreamCallback(CFReadStreamRef aStream,
 }
 
 @end
+
+#pragma clang diagnostic pop

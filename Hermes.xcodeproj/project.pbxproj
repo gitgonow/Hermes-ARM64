@@ -61,9 +61,7 @@
 		FA3CFF44132FC4CF003554E2 /* PlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3CFF43132FC4CF003554E2 /* PlaybackController.m */; };
 		FA454685156604D100EE98C7 /* blowfish.c in Sources */ = {isa = PBXBuildFile; fileRef = FA454683156604D100EE98C7 /* blowfish.c */; };
 		FA560C511331701E00215F71 /* ImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = FA560C501331701E00215F71 /* ImageLoader.m */; };
-		FA6E801B1438E4B700D01FB5 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6E801A1438E4B700D01FB5 /* Growl.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		FA6E801E1438E50C00D01FB5 /* Growler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6E801D1438E50C00D01FB5 /* Growler.m */; };
-		FA6E801F1438E96F00D01FB5 /* Growl.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = FA6E801A1438E4B700D01FB5 /* Growl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA7BF0321331832E00E26ADA /* zzs.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7BF0311331832E00E26ADA /* zzs.png */; };
 		FA7FD1E413325F6600DF66EB /* volume_up.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7FD1E313325F6600DF66EB /* volume_up.png */; };
 		FA85E6CE1333B257005C96B8 /* volume_down.icns in Resources */ = {isa = PBXBuildFile; fileRef = FA85E6CD1333B257005C96B8 /* volume_down.icns */; };
@@ -73,8 +71,6 @@
 		FA94E6F81368E62C0063860C /* Scrobbler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA94E6F71368E62C0063860C /* Scrobbler.m */; };
 		FAAB28CF1336FB0300FC04C4 /* pandora.icns in Resources */ = {isa = PBXBuildFile; fileRef = FAAB28CE1336FB0300FC04C4 /* pandora.icns */; };
 		FACFACD615673690008A2140 /* StationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACFACD515673690008A2140 /* StationController.m */; };
-		FAD42F8813678F7500E935CA /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD42F8713678F7500E935CA /* Sparkle.framework */; };
-		FAD42FA013678FB000E935CA /* Sparkle.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = FAD42F8713678F7500E935CA /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAD42FA4136790DE00E935CA /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = FAD42FA3136790DE00E935CA /* dsa_pub.pem */; };
 		FAEFFAB1132CB173007DC6FB /* AuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFFAB0132CB173007DC6FB /* AuthController.m */; };
 		FAEFFBD5132CC0E2007DC6FB /* error_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAEFFBD4132CC0E2007DC6FB /* error_icon.png */; };
@@ -108,8 +104,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FAD42FA013678FB000E935CA /* Sparkle.framework in Copy Files */,
-				FA6E801F1438E96F00D01FB5 /* Growl.framework in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +204,6 @@
 		FA454684156604D100EE98C7 /* blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
 		FA560C4F1331701E00215F71 /* ImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageLoader.h; path = Models/ImageLoader.h; sourceTree = "<group>"; };
 		FA560C501331701E00215F71 /* ImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageLoader.m; path = Models/ImageLoader.m; sourceTree = "<group>"; };
-		FA6E801A1438E4B700D01FB5 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		FA6E801C1438E50C00D01FB5 /* Growler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Growler.h; path = Integration/Growler.h; sourceTree = "<group>"; };
 		FA6E801D1438E50C00D01FB5 /* Growler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Growler.m; path = Integration/Growler.m; sourceTree = "<group>"; };
 		FA7BF0311331832E00E26ADA /* zzs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zzs.png; sourceTree = "<group>"; };
@@ -229,7 +222,6 @@
 		FACF0184149A713700D1FB73 /* AudioStreamer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
 		FACFACD415673690008A2140 /* StationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StationController.h; path = Controllers/StationController.h; sourceTree = "<group>"; };
 		FACFACD515673690008A2140 /* StationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StationController.m; path = Controllers/StationController.m; sourceTree = "<group>"; };
-		FAD42F8713678F7500E935CA /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		FAD42FA3136790DE00E935CA /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		FAEFFAAF132CB173007DC6FB /* AuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthController.h; path = Controllers/AuthController.h; sourceTree = "<group>"; };
 		FAEFFAB0132CB173007DC6FB /* AuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthController.m; path = Controllers/AuthController.m; sourceTree = "<group>"; };
@@ -249,10 +241,8 @@
 				441C9F0D1CC80635000A0302 /* AudioToolbox.framework in Frameworks */,
 				E195ABA917D4636B00FE518C /* Quartz.framework in Frameworks */,
 				971CC3A11585DBD7004D75BA /* SystemConfiguration.framework in Frameworks */,
-				FA6E801B1438E4B700D01FB5 /* Growl.framework in Frameworks */,
 				FA228ECB137045F40070141A /* Security.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				FAD42F8813678F7500E935CA /* Sparkle.framework in Frameworks */,
 				E1D68B0A1E295DB50074ED7F /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,10 +283,8 @@
 				9728D8A5158C3E7C00C078A4 /* AudioToolbox.framework */,
 				9728D89C158C3E3C00C078A4 /* Carbon.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				FA6E801A1438E4B700D01FB5 /* Growl.framework */,
 				E195ABA817D4636B00FE518C /* Quartz.framework */,
 				FA228ECA137045F40070141A /* Security.framework */,
-				FAD42F8713678F7500E935CA /* Sparkle.framework */,
 				971CC3A01585DBD7004D75BA /* SystemConfiguration.framework */,
 			);
 			name = "Linked Frameworks";
@@ -773,7 +761,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_PREFIX_HEADER = Sources/Hermes_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
@@ -792,6 +779,8 @@
 					"-Wextra",
 					"-Wno-unused-parameter",
 					"-Werror",
+					"-Wno-error=deprecated-declarations",
+					"-Wno-error=deprecated-implementations",
 				);
 			};
 			name = Debug;
@@ -807,7 +796,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_PREFIX_HEADER = Sources/Hermes_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
@@ -826,6 +814,8 @@
 					"-Wextra",
 					"-Wno-unused-parameter",
 					"-Werror",
+					"-Wno-error=deprecated-declarations",
+					"-Wno-error=deprecated-implementations",
 				);
 			};
 			name = Release;
@@ -866,13 +856,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ARCHS = arm64;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DDEBUG";
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				VERSIONING_SYSTEM = "apple-generic";
-				WARNING_CFLAGS = "-Wall";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wno-error=deprecated-declarations",
+				);
 			};
 			name = Debug;
 		};
@@ -911,12 +905,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ARCHS = arm64;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				VERSIONING_SYSTEM = "apple-generic";
-				WARNING_CFLAGS = "-Wall";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wno-error=deprecated-declarations",
+				);
 			};
 			name = Release;
 		};
