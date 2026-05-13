@@ -20,9 +20,9 @@ The original Hermes project is unmaintained. This fork updates it to build and r
 
 ### Download
 
-Grab the latest DMG from the [Releases](https://github.com/gitgonow/Hermes-ARM64/releases) page.
+Grab the latest DMG directly: [Hermes-1.3.1.dmg](https://github.com/gitgonow/Hermes-ARM64/raw/main/hermes/Hermes-1.3.1.dmg)
 
-**Note:** This build is ad-hoc signed. On first launch, macOS may block it. Go to **System Settings > Privacy & Security** and click **Open Anyway**.
+**Note:** This build is ad-hoc signed. On first launch, macOS may block it. Right-click the app and select **Open**, or go to **System Settings > Privacy & Security** and click **Open Anyway**.
 
 ### Building from source
 
