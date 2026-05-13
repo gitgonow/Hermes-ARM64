@@ -1,23 +1,34 @@
-Hermes
-======
+Hermes (Apple Silicon)
+======================
 
+A work-alike version of the original [Hermes](https://github.com/HermesApp/Hermes) [Pandora](http://www.pandora.com/) client, modified for Apple Silicon and modern macOS.
 
-[![Build Status](https://travis-ci.org/HermesApp/Hermes.svg?branch=master)](https://travis-ci.org/HermesApp/Hermes)
+![Hermes on Apple Silicon](screenshot.png)
 
-A [Pandora](http://www.pandora.com/) client for macOS.
+The original Hermes project is unmaintained. This fork updates it to build and run natively on Apple Silicon (arm64) Macs running macOS 12.0+.
 
-### THIS PROJECT IS UNMAINTAINED
+### Changes from the original
 
-This means that bugs will not be fixed and features will not be added unless someone else does so.  Unfortunately, the former maintainers no longer have the time and/or resources to work on Hermes further.
+- **Apple Silicon native** — arm64 only, no Rosetta required
+- **macOS 12.0+ target** — builds and runs on modern macOS
+- **Removed Sparkle.framework** — auto-update framework removed (unmaintained upstream)
+- **Removed Growl.framework** — replaced with native NSUserNotificationCenter
+- **Fixed deprecated API warnings** — updated or suppressed deprecated calls
+- **Fixed window restoration crash** — ad-hoc signed builds no longer crash on launch
+- **Modern toolbar layout** — all toolbar items visible using expanded toolbar style
+- **Enhanced like indicator** — thumbs-up icon tints blue when a song is liked
 
-If you're interested in fixing up Hermes, please reply to this [GitHub issue (237)](https://github.com/HermesApp/Hermes/issues/237).
+### Building
 
-### Download Hermes
+Requires Xcode with arm64 support.
 
-- Click Download at [hermesapp.org](http://hermesapp.org/).
-- Or install using [Homebrew](http://brew.sh)/[Caskroom](https://caskroom.github.io): `brew cask install hermes`.
+```bash
+xcodebuild -project Hermes.xcodeproj -scheme Hermes -configuration Release \
+  -arch arm64 ONLY_ACTIVE_ARCH=NO \
+  CODE_SIGN_IDENTITY="-" CODE_SIGNING_REQUIRED=NO build
+```
 
-If you would like to compile Hermes, continue reading.
+The built app will be in `~/Library/Developer/Xcode/DerivedData/Hermes-*/Build/Products/Release/Hermes.app`.
 
 ### Develop against Hermes
 
@@ -27,7 +38,7 @@ ways you can develop against Hermes if you really want to.
 1. `NSDistributedNotificationCenter` - Every time a new song plays, a
    notification is posted with the name `hermes.song` under the object `hermes`
    with `userInfo` as a dictionary representing the song being played. See
-   [Song.m](https://github.com/HermesApp/Hermes/blob/master/Sources/Pandora/Song.m#L29)
+   [Song.m](Sources/Pandora/Song.m)
    for the keys available to you.
 
 2. AppleScript - here's an example script:
@@ -66,28 +77,8 @@ ways you can develop against Hermes if you really want to.
           ... etc
         end tell
 
-### Want something new/fixed?
-
-1. [Open a ticket](https://github.com/HermesApp/Hermes/issues)! We'll get
-   around to it soon, especially if it sounds appealing to us. We take all
-   suggestions/feedback!
-
-2. Take a stab at it yourself if you're brave. Just send us a pull request if
-   you've got something fixed. Here's some common things to do at the command
-   line:
-
-        make        # build everything
-        make run    # build and run the application (logging to stdout)
-        make dbg    # build and run inside LLDB
-
-        # Build with the 'Release' configuration instead of 'Debug'
-        make CONFIGURATION=Release [run|dbg]
-
-   Please note that Media Key shortcuts
-   [will not work](https://github.com/nevyn/SPMediaKeyTap/blob/master/SPMediaKeyTap.m#L108)
-   if compiled with `CONFIGURATION=Debug` (the default).
-
 ## License
 
-Code is available under the [MIT
-License](https://github.com/HermesApp/Hermes/blob/master/LICENSE).
+Code is available under the [MIT License](LICENSE).
+
+Based on the original [Hermes](https://github.com/HermesApp/Hermes) by Alex Crichton, Nicholas Riley, and Winston Weinert.
