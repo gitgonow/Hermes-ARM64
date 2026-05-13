@@ -196,8 +196,7 @@
     [self updateWindowTitle];
   }
   
-  window.restorable = YES;
-  window.restorationClass = [self class];
+  window.restorable = NO;
 
   [NSApp activateIgnoringOtherApps:YES];
 
@@ -225,6 +224,7 @@
 
   NSString *savedUsername = [self getSavedUsername];
   NSString *savedPassword = [self getSavedPassword];
+
   if (savedPassword == nil || [savedPassword isEqualToString:@""] ||
       savedUsername == nil || [savedUsername isEqualToString:@""]) {
     [auth show];
