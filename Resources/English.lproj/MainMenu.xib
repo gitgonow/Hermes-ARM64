@@ -26,9 +26,6 @@
                             </menuItem>
                             <menuItem title="Check for Updates…" id="1001">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="checkForUpdates:" target="1000" id="1002"/>
-                                </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="236">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
@@ -978,7 +975,6 @@ Gw
                 <outlet property="window" destination="1112" id="2334"/>
             </connections>
         </customObject>
-        <customObject id="1000" userLabel="Sparkle Updater" customClass="SUUpdater"/>
         <customObject id="1331" userLabel="HistoryController" customClass="HistoryController">
             <connections>
                 <outlet property="collection" destination="2161" id="2440"/>
@@ -1480,9 +1476,6 @@ DQ
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <binding destination="1000" name="value" keyPath="automaticallyChecksForUpdates" id="1862"/>
-                    </connections>
                 </button>
                 <button id="1851">
                     <rect key="frame" x="18" y="18" width="326" height="18"/>
@@ -1491,10 +1484,6 @@ DQ
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
-                    <connections>
-                        <binding destination="1000" name="enabled" keyPath="automaticallyChecksForUpdates" id="1871"/>
-                        <binding destination="1000" name="value" keyPath="automaticallyDownloadsUpdates" id="1863"/>
-                    </connections>
                 </button>
                 <popUpButton verticalHuggingPriority="750" id="1864">
                     <rect key="frame" x="164" y="39" width="100" height="26"/>
@@ -1513,10 +1502,6 @@ DQ
                             </items>
                         </menu>
                     </popUpButtonCell>
-                    <connections>
-                        <binding destination="1000" name="enabled" keyPath="automaticallyChecksForUpdates" id="1874"/>
-                        <binding destination="1000" name="selectedTag" keyPath="updateCheckInterval" id="1878"/>
-                    </connections>
                 </popUpButton>
                 <button id="vFC-lf-ywe">
                     <rect key="frame" x="18" y="129" width="326" height="18"/>
@@ -2335,9 +2320,6 @@ DQ
                 </menuItem>
                 <menuItem title="Check for Updates…" id="y6Z-jE-Fwo">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="checkForUpdates:" target="1000" id="VN2-Ro-b6R"/>
-                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="fLS-rf-56B"/>
                 <menuItem title="Hermes Preferences…" id="2325">
