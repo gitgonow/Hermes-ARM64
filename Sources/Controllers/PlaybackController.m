@@ -35,6 +35,20 @@ BOOL playOnStart = YES;
   playOnStart = play;
 }
 
+- (void) updateLikeAppearance:(BOOL)liked {
+  if (liked) {
+    NSImage *img = [[NSImage imageNamed:@"thumbup"] copy];
+    [img lockFocus];
+    [[NSColor systemBlueColor] set];
+    NSRect bounds = NSMakeRect(0, 0, img.size.width, img.size.height);
+    NSRectFillUsingOperation(bounds, NSCompositingOperationSourceAtop);
+    [img unlockFocus];
+    [like setImage:img];
+  } else {
+    [like setImage:[NSImage imageNamed:@"thumbup"]];
+  }
+}
+
 + (BOOL) playOnStart {
   return playOnStart;
 }
@@ -381,10 +395,12 @@ BOOL playOnStart = YES;
 
   if ([[song nrating] intValue] == 1) {
     [toolbar setSelectedItemIdentifier:[like itemIdentifier]];
+    [self updateLikeAppearance:YES];
     if (remoteCommandCenter != nil)
       remoteCommandCenter.likeCommand.active = true;
   } else {
     [toolbar setSelectedItemIdentifier:nil];
+    [self updateLikeAppearance:NO];
     if (remoteCommandCenter != nil)
       remoteCommandCenter.likeCommand.active = false;
   }
@@ -470,12 +486,14 @@ BOOL playOnStart = YES;
     [[self pandora] deleteRating:song];
     if (songIsPlaying) {
       [toolbar setSelectedItemIdentifier:nil];
+      [self updateLikeAppearance:NO];
     }
   }
   else if (rating == 1) {
     [[self pandora] rateSong:song as:YES];
     if (songIsPlaying) {
       [toolbar setSelectedItemIdentifier:[like itemIdentifier]];
+      [self updateLikeAppearance:YES];
     }
   }
 
